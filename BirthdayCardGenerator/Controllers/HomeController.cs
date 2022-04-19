@@ -18,9 +18,19 @@ namespace BirthdayCardGenerator.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult BirthdayForm(Birthday birthday)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                //ViewBag.Name = string.Format("Name: {0}, {1}, {2}", From, To, Message);
+                //return Redirect("");
+                return View("BirthdayForm",birthday);
+                //return Content($"From: {birthday.From}\\t To: {birthday.To}\\t Message: {birthday.Message}");
+
+            }
+            return View("Index");
+            //return RedirectToAction("Index");
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
