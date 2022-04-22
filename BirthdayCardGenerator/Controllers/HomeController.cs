@@ -22,13 +22,9 @@ namespace BirthdayCardGenerator.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 return View("BirthdayForm", birthday);
-
-
             }
             return View("Index");
-
 
         }
 
