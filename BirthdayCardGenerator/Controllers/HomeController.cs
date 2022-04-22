@@ -22,14 +22,13 @@ namespace BirthdayCardGenerator.Controllers
         {
             if (ModelState.IsValid)
             {
-                //ViewBag.Name = string.Format("Name: {0}, {1}, {2}", From, To, Message);
-                //return Redirect("");
-                return View("BirthdayForm",birthday);
-                //return Content($"From: {birthday.From}\\t To: {birthday.To}\\t Message: {birthday.Message}");
+
+                return View("BirthdayForm", birthday);
+
 
             }
             return View("Index");
-            //return RedirectToAction("Index");
+
 
         }
 
